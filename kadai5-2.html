@@ -6,8 +6,7 @@
 <body>
     <h1 id="msg">猫の豆知識のAPI</h1>
     <form name="apiform"><p>
-        tips：<input type="text" name="form_data">
-        <button type="button" id="btn1" onclick="some_api(this.form)">実行</button>
+        豆知識を表示：<button type="button" id="btn1" onclick="some_api(this.form)">実行</button>
     </p></form>
     
     <div id="result"></div>
@@ -17,7 +16,6 @@
             const response = await fetch(endpoint);
             const data = await response.json();
             document.getElementById("result").innerHTML = data.fact;
-            document.getElementById("result").innerHTML += myForm.form_data.value+"<br />";
             document.apiform.reset();
         }
     </script>
